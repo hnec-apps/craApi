@@ -13,22 +13,21 @@ var store = new MongoDBStore({
   collection: 'mySessions'
 });
 
-store.on('error', function(error) {
+store.on('error', function (error) {
   assert.ifError(error);
   assert.ok(false);
 });
 
 
-app.use(session(
-  { store: store, 
-    secret: 'SEKR37',
-    cookie: {
-      maxAge: 1000 * 60 * 60 // 1 hour
-    },
-    resave: true,
-    saveUninitialized: true 
-  }
-));
+app.use(session({
+  store: store,
+  secret: 'SEKR37',
+  cookie: {
+    maxAge: 1000 * 60 * 60 // 1 hour
+  },
+  resave: true,
+  saveUninitialized: true
+}));
 
 app.use(bodyParser.json());
 app.use(passport.initialize());
