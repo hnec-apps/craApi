@@ -4,8 +4,8 @@ const request = require('request-promise');
 const citizen_mgr = require('../controller/citizen').citizen_mgr;
 const url = 'http://localhost:6000';
 module.exports = app => {
+  
 async function doRequest(personalId) {
-  console.log(url)
     var urlupdate = url+'/?PersonID='+personalId;
     const opstion ={
             url : url,
@@ -25,18 +25,19 @@ async function doRequest(personalId) {
       }
 }
 app.get('/', async (req, res) => {
-    console.log("req ",req.query.PersonID);
     const personId = req.query.PersonID;
     try{
       let result = await doRequest(personId);
       res.send(result);
       try{
-        console.log("am h");
+        // check the result
         await citizen_mgr.add_citizen(result);
       }catch(err){
+        // into log
         console.log('im in err cit',err)
       }
     }catch(err){
+      // into log
       console.log("err",err);
     }
   });
