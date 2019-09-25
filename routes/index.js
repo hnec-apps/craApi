@@ -1,5 +1,5 @@
-const delay = require('delay');
-const axios = require('axios');
+const delay = require('delay'); //This For delay the execution if we need to
+const axios = require('axios'); //This replace if the request library does not work properly
 const request = require('request-promise');
 const citizen_mgr = require('../controller/citizen').citizen_mgr;
 const url = 'http://localhost:5000/getcitizen';
