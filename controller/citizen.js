@@ -42,9 +42,7 @@ exports.citizen_mgr = {
           person_id: body.person_id
         }
       });
-      console.log("im hh");
       if (citizen) {
-        console.log(" im in add", citizen);
         let tempcitizen = {
           person_id: citizen.person_id,
           national_id: citizen.national_id,
