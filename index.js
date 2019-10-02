@@ -3,12 +3,12 @@ const session = require('express-session');
 const passport = require('passport');
 const bodyParser = require('body-parser');
 const MongoDBStore = require('connect-mongodb-session')(session);
-require('./services/passport');
+const routes = require('./routes/index');
+const user = require('./routes/user');
 require('dotenv').config();
 
 const app = express();
-
-var store = new MongoDBStore({
+const store = new MongoDBStore({
   uri: process.env.mongoURI,
   collection: 'mySessions'
 });
@@ -33,9 +33,10 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
-require('./routes/user')(app);
-require('./routes/index')(app);
-
+// require('./routes/user')(app);
+// require('./routes/index')(app);
+app.use('/', routes);
+app.use('/user', user);
 if (['production', 'ci'].includes(process.env.NODE_ENV)) {
 
 }
