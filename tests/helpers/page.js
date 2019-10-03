@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const sessionFactory = require('../factories/sessionFactory');
 const userFactory = require('../factories/userFactory');
 
 class CustomPage {
@@ -37,7 +38,7 @@ class CustomPage {
       name: 'session.sig',
       value: sig
     });
-    await this.page.goto('http://localhost:5000/');
+    await this.page.goto('http://localhost:5000');
     await this.page.waitFor('a[href="/auth/logout"]');
   }
 

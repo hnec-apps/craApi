@@ -1,6 +1,6 @@
-let passport = require('passport');
-let LocalStrategy = require('passport-local').Strategy;
-let easyPbkdf2 = require("easy-pbkdf2")();
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+const easyPbkdf2 = require("easy-pbkdf2")();
 const user_mgr = require('../controller/user').user_mgr;
 const models = require("../modules");
 
