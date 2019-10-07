@@ -1,0 +1,94 @@
+<template>
+  <div id="app">
+    <header>
+      <div class="menu">
+        <router-link to="/">الرئيسية</router-link>
+      </div>
+      <div class="user-box">
+        <router-link v-show="Logid==false" to="/Login">تسجل الدخول</router-link>
+        <a v-show="Logid==true" @click="Logout()">تسجل الخروج</a>
+      </div>
+    </header>
+    <router-view />
+  </div>
+</template>
+
+
+
+<script>
+// @ is an alias to /src
+
+export default {
+  name: "home",
+  data: function() {
+    return {
+      Logid:true,
+    };
+  },
+    methods: {
+    Logout: function() {
+      alert("Log Out");
+    }
+  }
+};
+</script>
+
+
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Cairo");
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "cairo";
+  background: #eee;
+}
+header {
+  float: right;
+  width: 970px;
+  padding: 0px calc(50% - 485px);
+  height: 70px;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(35, 35, 51, 0.04), 0 2px 6px rgba(35, 35, 51, 0.04);
+  .menu {
+    float: right;
+    height: 40px;
+    margin: 15px 0px;
+    a {
+      float: right;
+      text-decoration: none;
+      color: #777;
+      line-height: 40px;
+      margin: 0px 15px;
+    }
+    a:hover {
+      color: #fb8601;
+    }
+  }
+  .user-box {
+    float: left;
+    height: 40px;
+    margin: 15px 0px;
+    a {
+      float: right;
+      text-decoration: none;
+      color: #777;
+      line-height: 40px;
+      margin: 0px 15px;
+    }
+    a:hover {
+      color: #fb8601;
+    }
+  }
+}
+
+.content{
+  float: right;
+  width: 970px;
+  min-height: 600px;
+  margin: 50px calc(50% - 485px);
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  padding-bottom: 80px;
+}
+</style>
