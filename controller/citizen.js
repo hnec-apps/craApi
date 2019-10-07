@@ -1,13 +1,15 @@
 var models = require("../modules");
+var log = require("./log").log_mgr
 exports.citizen_mgr = {
   get_citizens: async () => {
     try {
       return await models.Citizen.findAndCountAll({
         where: {
-          status: 1
+          deleted: 0
         }
       });
     } catch (err) {
+      log.add_log(log.add_log(JSON.stringify({national_id: nid}),JSON.stringify(err)),JSON.stringify(err))
       return (err);
     }
   },
@@ -21,6 +23,7 @@ exports.citizen_mgr = {
         }
       });
     } catch (err) {
+      log.add_log(JSON.stringify({national_id: nid}),JSON.stringify(err))
       return (err);
     }
   },
@@ -32,6 +35,8 @@ exports.citizen_mgr = {
         }
       });
     } catch (err) {
+     
+      log.add_log(JSON.stringify({person_id: pid}),JSON.stringify(err))
       return (err);
     }
   },
@@ -40,6 +45,8 @@ exports.citizen_mgr = {
       return await models.Citizen.create(body);
 
     } catch (err) {
+
+      log.add_log(JSON.stringify(body),JSON.stringify(err))
       return (err);
     }
 
@@ -53,6 +60,7 @@ exports.citizen_mgr = {
       });
 
     } catch (err) {
+      log.add_log(JSON.stringify({person_id: body.person_id}),JSON.stringify(err))
       return (err);
     }
 

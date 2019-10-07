@@ -9,6 +9,7 @@ exports.user_mgr = {
         }
       });
     } catch (err) {
+      log.add_log(null, JSON.stringify(err))
       return (err);
     }
   },
@@ -23,6 +24,7 @@ exports.user_mgr = {
         }
       });
     } catch (err) {
+      log.add_log(JSON.stringify({id: id}), JSON.stringify(err));
       return (err);
     }
   },
@@ -36,6 +38,7 @@ exports.user_mgr = {
         }
       });
     } catch (err) {
+      log.add_log(JSON.stringify({email: email}), JSON.stringify(err))
       return (err);
     }
   },
@@ -57,6 +60,7 @@ exports.user_mgr = {
         });
         // return await models.User.create(obj);
       } catch (err) {
+        log.add_log(JSON.stringify(obj), JSON.stringify(err));
         return (err);
       }
     });

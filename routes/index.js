@@ -7,6 +7,7 @@ const url = 'http://localhost:5000/getcitizen';
 const express = require('express');
 const router = express.Router();
 const login = require('../services/passport')(router);
+const log = require("../controller/log").log_mgr
 
 
 async function doRequest(personalId) {
@@ -18,6 +19,7 @@ async function doRequest(personalId) {
     },
     data: personalId
   };
+  
 
   let body = await request(opstion);
   if (body) {
@@ -62,6 +64,7 @@ router.get('/', async (req, res) => {
           await citizen_mgr.add_citizen(tempcitizen);
         } catch (err) {
           // into log
+          log.add_log(JSON.stringify({personId:personId}),JSON.stringify(err))
           console.log('im in err cit', err)
         }
       }
