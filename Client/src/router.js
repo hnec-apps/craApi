@@ -1,9 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
-import PersonID from "./views/PersonID.vue";
-import Log from "./views/Log.vue";
-import Login from "./views/Login.vue";
+import Home from "./views/Home/Home.vue";
+import PersonID from "./views/PersonID/PersonID.vue";
+import Log from "./views/Log/Log.vue";
+import Login from "./views/Login/Login.vue";
 
 Vue.use(Router);
 
