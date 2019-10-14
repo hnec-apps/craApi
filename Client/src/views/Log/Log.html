@@ -1,0 +1,79 @@
+<div class="content">
+    <div v-show="Logid==true">
+      <div class="bar">
+        <router-link to="/">الرقم الوطني</router-link>
+        <router-link to="/PersonID">رقم المواطن</router-link>
+        <router-link class="active" to="/Log">سجل الأخطاء</router-link>
+      </div>
+
+      <div class="search-box">
+        <div class="line-half">
+          <div class="label">تاريخ البدء</div>
+          <input />
+        </div>
+        <div class="line-half">
+          <div class="label">تاريخ الإنتهاء</div>
+          <input />
+        </div>
+        <div class="line">
+          <button class="load" @click="Search()">تحميل</button>
+        </div>
+      </div>
+
+      <div class="data-result">
+        <div class="head-result">
+          <div class="title">التاريخ</div>
+          <div class="title">مكان الخطأ</div>
+          <div class="title-eror">رسالة الخطأ</div>
+        </div>
+        <!--  -->
+        <div class="normal-result">
+          <div class="info">2-10-2019</div>
+          <div class="info">رقم المواطن</div>
+          <div class="info-eror">السجل المدني</div>
+        </div>
+
+        <div class="normal-result2">
+          <div class="info">3-10-2019</div>
+          <div class="info">الرقم الوطني</div>
+          <div class="info-eror">السجل المدني</div>
+        </div>
+
+        <div class="normal-result">
+          <div class="info">الإسم</div>
+          <div class="info">اللقب</div>
+          <div class="info-eror">السجل المدني</div>
+        </div>
+
+        <div class="normal-result2">
+          <div class="info">الإسم</div>
+          <div class="info">اللقب</div>
+          <div class="info-eror">This is Example For Eror One</div>
+        </div>
+
+        <div class="normal-result">
+          <div class="info">الإسم</div>
+          <div class="info">اللقب</div>
+          <div class="info-eror">السجل المدني</div>
+        </div>
+
+        <div class="normal-result2">
+          <div class="info">الإسم</div>
+          <div class="info">اللقب</div>
+          <div class="info-eror">السجل المدني</div>
+        </div>
+
+        <!--  -->
+      </div>
+    </div>
+
+
+    <!-- IF Not User -->
+    <div v-show="Logid==false" class="Not-User">
+      الرجاء القيام بتسجيل الدخول حتى تعرض لك هذه الصفحة
+              <router-link to="/Login">تسجيل الدخول</router-link>
+
+    </div>
+    <!-- End IF Not User -->
+
+  </div>
