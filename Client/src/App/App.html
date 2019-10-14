@@ -1,0 +1,12 @@
+<div id="app">
+    <header>
+      <div class="menu">
+        <router-link to="/">الرئيسية</router-link>
+      </div>
+      <div class="user-box">
+        <router-link v-show="Logid==false" to="/Login">تسجل الدخول</router-link>
+        <a v-show="Logid==true" @click="Logout">تسجل الخروج</a>
+      </div>
+    </header>
+    <router-view />
+  </div>

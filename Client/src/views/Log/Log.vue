@@ -1,0 +1,194 @@
+<template src="./Log.html">
+ 
+</template>
+
+<script src="./Log.js">
+</script>
+
+<style lang="scss">
+.bar {
+  float: right;
+  width: 100%;
+  border-bottom: 3px solid #e74c3c;
+  margin-top: 30px;
+  a {
+    float: right;
+    width: calc(100% / 3);
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #777;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  a.active {
+    color: #e74c3c;
+  }
+}
+
+.search-box {
+  float: right;
+  width: calc(100% - 40px);
+  margin: 40px 20px;
+  border-bottom: 1px solid #efefef;
+  .line {
+    float: right;
+    width: 100%;
+    margin-top: 20px;
+    .label {
+      float: right;
+      color: #777;
+      font-size: 16px;
+      margin-left: 5px;
+      line-height: 20px;
+      margin-right: -4px;
+    }
+    input {
+      float: right;
+      width: calc(100% - 40px);
+      margin: 0px;
+      margin-top: 8px;
+      font-size: 20px;
+      font-family: "cairo";
+      line-height: 42px;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid #eee;
+      color: #555;
+      padding: 0px 15px;
+      text-align: right;
+    }
+    .load {
+      float: right;
+      background: #555;
+      border: none;
+      color: #fff;
+      font-family: "cairo";
+      width: 160px;
+      line-height: 44px;
+      font-size: 17px;
+      border-radius: 3px;
+      margin: 0px calc(50% - 80px);
+      margin-bottom: 60px;
+      margin-top: 30px;
+    }
+  }
+  .line-half {
+    float: right;
+    width: 50%;
+    margin-top: 20px;
+    .label {
+      float: right;
+      color: #777;
+      font-size: 16px;
+      margin-left: 5px;
+      line-height: 20px;
+      margin-right: -4px;
+    }
+    input {
+      float: right;
+      width: calc(100% - 40px);
+      margin: 0px;
+      margin-top: 8px;
+      font-size: 20px;
+      font-family: "cairo";
+      line-height: 42px;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid #eee;
+      color: #555;
+      padding: 0px 15px;
+      text-align: right;
+    }
+  }
+}
+
+.data-result {
+  float: right;
+  width: calc(100% - 40px);
+  margin: 0px 20px;
+  .head-result {
+    float: right;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    border-bottom: 1px solid #eee;
+    .title {
+      float: right;
+      width: calc(100% / 6);
+      text-align: center;
+      color: #555;
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .title-eror {
+      float: right;
+      width: calc(100% / 1.5);
+      text-align: center;
+      color: #555;
+      font-weight: bold;
+      font-size: 17px;
+    }
+  }
+  .normal-result {
+    float: right;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #efefef;
+    border-bottom: 1px solid #eee;
+    .info {
+      float: right;
+      width: calc(100% / 6);
+      text-align: center;
+      color: #555;
+      font-size: 15px;
+    }
+    .info-eror {
+      float: right;
+      width: calc(100% / 1.5);
+      text-align: center;
+      color: #555;
+      font-size: 15px;
+    }
+  }
+
+  .normal-result2 {
+    float: right;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #eee;
+    .info {
+      float: right;
+      width: calc(100% / 6);
+      text-align: center;
+      color: #555;
+      font-size: 15px;
+    }
+    .info-eror {
+      float: right;
+      width: calc(100% / 1.5);
+      text-align: center;
+      color: #555;
+      font-size: 15px;
+    }
+  }
+}
+
+.Not-User{
+  float: right;
+  width: 400px;
+  margin: 100px calc(50% - 200px);
+  font-size: 28px;
+  color: #777;
+  height: 400px;
+  text-align: center;
+  a{
+    color: #e74c3c;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+}
+
+</style>

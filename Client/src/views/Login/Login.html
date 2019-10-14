@@ -1,0 +1,27 @@
+<div class="content">
+    <div class="Login-Box" v-show="Logid==false">
+      <div class="Title">تسجيل الدخول</div>
+      <div class="Form">
+        <div class="Line">
+          <div class="Label">إسم المستخدم</div>
+          <input v-model="username"/>
+        </div>
+
+        <div class="Line">
+          <div class="Label">كلمة المرور</div>
+          <input v-model="password" />
+        </div>
+
+        <div class="Line">
+          <button @click="Login">تسجيل الدخول</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- already User -->
+    <div v-show="Logid==true" class="You-User">
+      أنت مسجل دخولك مسبقا, لتبديل حسابك قم بتسجيل الخروج
+      <a @click="Logout()">تسجيل الخروج</a>
+    </div>
+    <!-- End already User -->
+  </div>
