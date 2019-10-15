@@ -2,6 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const passport = require('passport');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const routes = require('./routes/index');
 const user = require('./routes/user');
@@ -32,7 +33,7 @@ app.use(session({
 app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.use(cors());
 // require('./routes/user')(app);
 // require('./routes/index')(app);
 app.use('/', routes);

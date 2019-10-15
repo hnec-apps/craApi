@@ -14,7 +14,7 @@ export default {
     // GetNid:DataServices.GetByNid(19),
     Search: function() {
       DataServices.GetByNid(this.PersonID),
-      this.Person.FirstName = "عبدالسميع";
+        (this.Person.FirstName = "عبدالسميع");
       this.Person.SecondName = "محمود";
       this.Person.ThirdName = "نوري";
       this.Person.LastName = "العاشق";
@@ -25,9 +25,8 @@ export default {
       this.Person.BirthDate = "26-4-1900";
       this.Person.CrsLocation = "طرابلس المركز";
       this.ShowData = true;
-      DataServices.GetByNid
+      DataServices.GetByNid;
     },
     Logout: DataServices.Logout
-  
   }
 };

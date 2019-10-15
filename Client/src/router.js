@@ -30,6 +30,6 @@ export default new Router({
       path: "/Login",
       name: "Login Page",
       component: Login
-    },
+    }
   ]
 });

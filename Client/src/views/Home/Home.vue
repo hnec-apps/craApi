@@ -5,5 +5,4 @@
 <style lang="scss" src="@/Scss/Search.scss"></style>
 
 <style lang="scss">
-
 </style>

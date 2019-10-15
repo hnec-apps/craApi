@@ -1,5 +1,5 @@
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import DataServices from "@/Model/DataServices.js";
 
 export default {
   name: "home",
@@ -12,17 +12,18 @@ export default {
     };
   },
   methods: {
-    Search: function() {
-      this.Person.FirstName = "عبدالسميع";
-      this.Person.SecondName = "محمود";
-      this.Person.ThirdName = "نوري";
-      this.Person.LastName = "العاشق";
-      this.Person.Gender = "ذكر";
-      this.Person.FamilyNumber = "23472";
+    Search: async function() {
+      const response = await DataServices.GetByPersonId(this.PersonID);
+      this.Person.FirstName = response.first_name;
+      this.Person.SecondName = response.father_name;
+      this.Person.ThirdName = response.grand_name;
+      this.Person.LastName = response.family_name;
+      this.Person.Gender = response.gender;
+      this.Person.FamilyNumber = response.registry_number;
       this.Person.PhoneNumber = "0910000000";
-      this.Person.IDnumber = "119930000000000";
-      this.Person.BirthDate = "26-4-1900";
       this.Person.CrsLocation = "طرابلس المركز";
+      this.Person.IDnumber = response.national_id;
+      this.Person.BirthDate = response.birth_date;
       this.ShowData = true;
     }
   }

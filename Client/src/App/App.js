@@ -4,10 +4,10 @@ export default {
   name: "home",
   data: function() {
     return {
-      Logid:true,
+      Logid: true
     };
   },
-    methods: {
+  methods: {
     Logout: DataServices.Logout
   }
 };

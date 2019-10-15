@@ -6,13 +6,13 @@ export default {
   data: function() {
     return {
       Logid: this.$parent.Logid,
-      username:null,
-      password:null,
+      username: null,
+      password: null
     };
   },
   methods: {
-    Login: function(){
-      DataServices.Login(this.username,this.password);
+    Login: function() {
+      DataServices.Login(this.username, this.password);
     },
     Logout: function() {
       alert("Log Out");

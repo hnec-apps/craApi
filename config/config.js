@@ -1,5 +1,5 @@
 require('dotenv').config();
-module.exports ={
+module.exports = {
   development: {
     username: process.env.username,
     password: process.env.password,
@@ -7,6 +7,7 @@ module.exports ={
     host: process.env.host,
     dialect: process.env.dialect,
     operatorsAliases: false,
+    logging: false,
     pool: {
       max: 5,
       min: 0,
@@ -21,6 +22,7 @@ module.exports ={
     host: process.env.host,
     dialect: process.env.dialect,
     operatorsAliases: false,
+    logging: false,
     pool: {
       max: 5,
       min: 0,
@@ -35,6 +37,7 @@ module.exports ={
     host: process.env.host,
     dialect: process.env.dialect,
     operatorsAliases: false,
+    logging: false,
     pool: {
       max: 5,
       min: 0,

@@ -19,7 +19,7 @@ async function doRequest(personalId) {
     },
     data: personalId
   };
-  
+
 
   let body = await request(opstion);
   if (body) {
@@ -64,7 +64,9 @@ router.get('/', async (req, res) => {
           await citizen_mgr.add_citizen(tempcitizen);
         } catch (err) {
           // into log
-          log.add_log(JSON.stringify({personId:personId}),JSON.stringify(err))
+          log.add_log(JSON.stringify({
+            personId: personId
+          }), JSON.stringify(err))
           console.log('im in err cit', err)
         }
       }
@@ -80,7 +82,7 @@ router.get('/', async (req, res) => {
 });
 // this function is for test only   
 router.get('/getcitizen', async (req, res) => {
-
+  console.log('im in get cit')
   const personId = req.query.PersonID;
   res.send(await citizen_mgr.get_citizen_P(personId));
 
