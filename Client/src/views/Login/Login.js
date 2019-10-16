@@ -1,4 +1,5 @@
 // @ is an alias to /src
+
 import DataServices from "@/Model/DataServices.js";
 
 export default {
