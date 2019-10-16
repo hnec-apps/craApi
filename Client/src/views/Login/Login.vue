@@ -1,9 +1,5 @@
-<template src="./Login.html">
-</template>
+<template src="./Login.html"> </template>
 
-<script src="./Login.js">
+<script src="./Login.js"></script>
 
-</script>
-
-<style lang="scss" src="@/Scss/Login.scss">
-</style>
+<style lang="scss" src="@/Scss/Login.scss"></style>

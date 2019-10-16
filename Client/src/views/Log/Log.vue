@@ -1,9 +1,6 @@
-<template src="./Log.html">
- 
-</template>
+<template src="./Log.html"> </template>
 
-<script src="./Log.js">
-</script>
+<script src="./Log.js"></script>
 
 <style lang="scss">
 .bar {
@@ -176,7 +173,7 @@
   }
 }
 
-.Not-User{
+.Not-User {
   float: right;
   width: 400px;
   margin: 100px calc(50% - 200px);
@@ -184,11 +181,10 @@
   color: #777;
   height: 400px;
   text-align: center;
-  a{
+  a {
     color: #e74c3c;
     font-weight: bold;
     margin-right: 5px;
   }
 }
-
 </style>

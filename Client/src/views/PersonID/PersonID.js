@@ -1,5 +1,6 @@
 // @ is an alias to /src
-import DataServices from "@/Model/DataServices.js";
+// eslint-disable-next-line import/no-unresolved
+import DataServices from "@/Model/DataServices";
 
 export default {
   name: "home",
