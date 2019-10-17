@@ -1,6 +1,6 @@
 <div class="content">
     <!-- IF User -->
-    <div v-show="Logid==true">
+    <div v-show="this.$parent.Logid==true">
       <div class="bar">
         <router-link class="active" to="/">الرقم الوطني</router-link>
         <router-link to="/PersonID">رقم المواطن</router-link>
@@ -71,7 +71,7 @@
     <!-- End If User -->
 
     <!-- IF Not User -->
-    <div v-show="Logid==false" class="Not-User">
+    <div v-show="this.$parent.Logid==false" class="Not-User">
       الرجاء القيام بتسجيل الدخول حتى تعرض لك هذه الصفحة
               <router-link to="/Login">تسجيل الدخول</router-link>
 

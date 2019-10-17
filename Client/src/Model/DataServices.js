@@ -1,4 +1,5 @@
 import axios from "axios";
+import { userInfo } from "os";
 // npm install --save axios
 const url = "http://localhost:5000";
 export default {
@@ -10,15 +11,17 @@ export default {
   Login(Username, Password) {
     alert(Username);
     alert(Password);
-    var url =
-      "http://localhost/AskApi/Login.php?email=" +
-      Username +
-      "&pass=" +
-      Password;
-    axios.get(url).then(res => {
-      console.log(res.data);
-      return res.data;
-    });
+    if(Username=="hnec" && Password=="123"){
+      return {
+        user: true,
+        key: 'j23lk2'
+      };
+    }else{
+      return {
+        user: false,
+        eror: 'the user name or password is not true'
+      };
+    }
   },
 
   // ============== Home  Page ===================================================
@@ -37,6 +40,9 @@ export default {
   // ====== Log Out========
   Logout() {
     alert("You will Loging Out");
+    localStorage.Logid=false;
+    localStorage.key=null;
+    this.Logid=false
   },
 
   // ====== Get Data By NID ========

@@ -13,10 +13,20 @@ export default {
   },
   methods: {
     Login: function() {
-      DataServices.Login(this.username, this.password);
+      const check= DataServices.Login(this.username, this.password);
+      if(check.user==true){
+        this.$parent.Logid=true;
+        this.Logid=true;
+        localStorage.Logid=true;
+        alert(check.key);
+        localStorage.key=check.key;
+      }else{
+        alert(check.eror);
+      }
     },
     Logout: function() {
-      alert("Log Out");
+      DataServices.Logout();
+      this.$parent.Logid=false;
     }
   }
 };
