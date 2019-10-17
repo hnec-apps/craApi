@@ -28,5 +28,9 @@ export default {
       DataServices.GetByNid;
     },
     Logout: DataServices.Logout
+  },
+  created: function(){
+    if(localStorage.Logid=="false")
+    this.$router.push('Login') 
   }
 };

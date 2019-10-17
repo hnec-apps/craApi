@@ -22,5 +22,9 @@ export default {
       this.Person.CrsLocation = "طرابلس المركز";
       this.ShowData = true;
     }
+  },
+  created: function(){
+    if(localStorage.Logid=="false")
+    this.$router.push('Login') 
   }
 };

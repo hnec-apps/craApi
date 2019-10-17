@@ -20,7 +20,16 @@
     width: 400px;
     min-height: 400px;
     margin: 50px calc(50% - 200px);
-
+    .eror{
+      background: #E68364;
+      width: 100%;
+      color: #fff;
+      padding: 10px 0px;
+      text-align: center;
+      font-size: 18px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+      }
     .Line {
       float: right;
       width: calc(100% - 8px);

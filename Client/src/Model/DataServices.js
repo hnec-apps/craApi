@@ -3,14 +3,12 @@ import { userInfo } from "os";
 // npm install --save axios
 const url = "http://localhost:5000";
 export default {
-  sayHello() {
-    alert("hello");
-  },
 
   // ============== Login Page ===================================================
   Login(Username, Password) {
-    alert(Username);
-    alert(Password);
+
+    //  Location for get if this user
+    
     if(Username=="hnec" && Password=="123"){
       return {
         user: true,
@@ -19,7 +17,7 @@ export default {
     }else{
       return {
         user: false,
-        eror: 'the user name or password is not true'
+        eror: 'the username or password is not true'
       };
     }
   },
@@ -39,10 +37,10 @@ export default {
 
   // ====== Log Out========
   Logout() {
-    alert("You will Loging Out");
     localStorage.Logid=false;
     localStorage.key=null;
-    this.Logid=false
+    this.Logid=false;
+    this.$router.push('Login'); 
   },
 
   // ====== Get Data By NID ========

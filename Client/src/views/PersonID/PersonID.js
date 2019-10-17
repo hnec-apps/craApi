@@ -26,5 +26,9 @@ export default {
       this.Person.BirthDate = response.birth_date;
       this.ShowData = true;
     }
+  },
+  created: function(){
+    if(localStorage.Logid=="false")
+    this.$router.push('Login') 
   }
 };

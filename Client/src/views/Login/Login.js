@@ -8,7 +8,9 @@ export default {
     return {
       Logid: this.$parent.Logid,
       username: null,
-      password: null
+      password: null,
+      eror:null,
+      worng:false
     };
   },
   methods: {
@@ -18,15 +20,21 @@ export default {
         this.$parent.Logid=true;
         this.Logid=true;
         localStorage.Logid=true;
-        alert(check.key);
         localStorage.key=check.key;
+        this.$router.push('/') 
       }else{
-        alert(check.eror);
+        this.wrong=true;
+        this.eror=check.eror;
       }
     },
     Logout: function() {
       DataServices.Logout();
       this.$parent.Logid=false;
+      this.$router.push('/'); 
     }
+  },
+  created: function(){
+    if(localStorage.Logid=="true")
+    this.$router.push('/') 
   }
 };

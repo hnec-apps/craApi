@@ -2,6 +2,7 @@
     <div class="Login-Box" v-show="this.$parent.Logid==false">
       <div class="Title">تسجيل الدخول</div>
       <div class="Form">
+        <p class="eror" v-show="wrong==true">{{eror}}</p>
         <div class="Line">
           <div class="Label">إسم المستخدم</div>
           <input v-model="username"/>
